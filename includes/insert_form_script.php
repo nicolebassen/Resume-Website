@@ -1,5 +1,5 @@
 <?php
-	require ("../../../dbc.php");
+	require ("../dbc.php");
 	
 	// string variables to store field names and form input	
 	$allFields = "";

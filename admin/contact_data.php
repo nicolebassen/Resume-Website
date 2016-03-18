@@ -35,8 +35,7 @@ include('../../dbc.php');
                 <span class="pull-right"><a href="logout.php" class="logout">Logout</a></span>
                 </h2>
                 
-				<!-- table for displaying all messages sent through the contact form -->
-				
+				<!-- table for displaying all messages sent through the contact form -->		
 				<table id="formMessages" class="display" cellspacing="0" width="100%">
 				<thead>
 				  <tr>

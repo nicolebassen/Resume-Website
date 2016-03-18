@@ -26,6 +26,7 @@ include('includes/aside.php');
 
                 <div class="row margin-bottom">
 
+                  <!-- Left thumbnails (on medium or larger screens) -->
                   <div class="col-md-6">
 
                     <!-- Kent Food Bank Website Thumbnail -->
@@ -62,7 +63,7 @@ include('includes/aside.php');
                     
                   </div> <!-- /left thumbnails -->
                   
-                  <!--Right Thumbnails -->
+                  <!--Right Thumbnails (on medium or larger screens) -->
                   <div class="col-md-6">
                     
                     <!-- Seahawks Website Thumbnail -->
@@ -135,10 +136,6 @@ include('includes/aside.php');
   <script src="js/jquery.colorbox-min.js"></script>
   <script>
     jQuery(document).ready(function () {
-      //jQuery('a.kfbColorbox').find('#kfbLink').colorbox({
-        //'html': '<h2>Kent Food Bank Website</h2>', 
-        //href: 'portfolio.php p#kfbText'
-      //});
       jQuery('a.kfbColorbox').colorbox({
         opacity:0.5 ,
         rel:'group1',   

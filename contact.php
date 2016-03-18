@@ -1,8 +1,14 @@
 <?php
-include('redirect.php');
-
 // side section, stylesheet, hyperlinks and scripts
 include('includes/aside.php');
+
+/*
+ * Nicole Bassen
+ * nbassen.greenrivertech.net
+ * This page provides a contact form for users to send an e-mail
+ * that will be stored in a database and displayed on an admin page
+ */
+
 ?>
 
         <section class="column col-sm-9 wrapper-section">
@@ -85,7 +91,7 @@ include('includes/aside.php');
                     <?php if ($missing && in_array('message', $missing)) : ?>
                     <span class="errorMessage pull-right">Please enter a message</span>
                     <?php endif; ?><br>
-                    <textarea name="message" rows="7" id="message"><?php
+                    <textarea name="message" rows="8" id="message"><?php
                         if ($errors || $missing) {
                           echo htmlentities($message);
                         }
@@ -123,21 +129,11 @@ include('includes/aside.php');
 
                 </div>
 
-                </div>
-                
-                
-
-                
+                </div>           
 
               </section><!--/ about me -->
            
             </div><!--/ padding -->
-
-            <!--
-            <footer class="visible-xs">
-              <p class="text-center"><small>Tim Foreman&copy;2015 <span class="text-secondary">Web Developer</span></small></p>
-            </footer>
-            -->
           
           </div><!--/ col-9 -->
 
@@ -154,6 +150,7 @@ include('includes/aside.php');
   
   <!-- Nicole's jQuery -->
   <script>
+	// Changes border and background color of missing fields
 	<?php if (in_array("name", $errors) || in_array("name", $missing)) : ?>
 	  $("#name").css('background-color', 'rgb(150,150,150)');
 	  $("#name").css('border-color', 'rgb(200,200,200)');

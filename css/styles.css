@@ -538,12 +538,13 @@ section#login #loginButton {
 section#contact input, textarea,
 section#login input {
   width: 100%;
-  line-height: 30px;
   background-color: rgb(0, 0, 0);
   background-color: rgba(200, 200, 200, .25);
   border-radius: 0px;
   margin-bottom: 10px;
   border: 1px solid gray;
+  font-size: 18px;
+  padding: 5px;
 }
 section#contact input:focus, textarea:focus,
 section#login input:focus {

@@ -26,8 +26,8 @@ include('aside.php');
 
                 <h2 class="sectionHeader">Login</h2>
 				
-				  <!-- Display an error message if credentials are invalid -->
-				  <p class="errorMessage"><?php echo $loginMessage ?>
+				  <!-- Display an error message if form is filled out and credentials are invalid -->
+				  <p class="errorMessage"><?php if (!$missing) { echo $loginMessage; } ?>
 
                   <form method="post" action="<?= $_SERVER['PHP_SELF']; ?>" role="form">
                     
