@@ -101,7 +101,7 @@ include('includes/aside.php');
                   <div class="col-sm-6 text-center">
 
                     <article class="media">
-					  <span class="fa fa-envelope fa-lg"></span><span class="contactHeader">&nbsp;&nbsp;E-Mail</span><br>
+					  <span class="fa fa-envelope fa-2x"></span><br>
 						<div class="media-body animated fadeInRight">
 						  Nicolerbassen@gmail.com</div>
 
@@ -113,7 +113,7 @@ include('includes/aside.php');
 
                     <article class="media">
 
-                      <span class="fa fa-map-marker fa-lg"></span><span class="contactHeader">&nbsp;&nbsp;Location</span><br>
+                      <span class="fa fa-map-marker fa-2x"></span><br>
                       <div class="media-body animated fadeInRight">
 						Auburn, WA</div>
 

@@ -21,7 +21,7 @@
  *
  *
  *
- *	Nicole Bassen
+ *	Nicole Bassen Resume Website
  *	nbassen.greenrivertech.net
  *
  */
@@ -72,7 +72,6 @@ h6 {
   padding: 0;
   text-transform: uppercase;
 }
-
 h2.sectionHeader {
   margin-bottom: 15px;
 }
@@ -85,7 +84,6 @@ h2.sectionHeader {
 .btn {
   border-radius: 0;
 }
-
 .btn.btn-default {
   background-color: inherit;
   color: #eeeeee;
@@ -129,7 +127,7 @@ button:focus {
   color: #333333;
 }
 
-/* Menu bar styles */
+/* MENU BAR STYLES */
 .wrapper-aside .menuBar {
   margin-top: 5px;
   padding: 0;
@@ -142,13 +140,11 @@ button:focus {
 .wrapper-aside .menuBar button#menuToggle:hover {
   color: #e10037;
 }
-
 .wrapper-aside .dropdownMenu {
   display: none;
   padding:0;
   margin-bottom: 10px;
 }
-
 .wrapper-aside #menuOptions li.navItem a {
   background-color: #eeeeee;
   color: rgb(30,30,30);
@@ -166,6 +162,7 @@ button:focus {
   padding-left: 0;
 }
 
+/* ASIDE HEADER STYLES */
 .wrapper-aside header {
   margin: 10px 0 10px 0;
   text-align: center;
@@ -199,6 +196,7 @@ button:focus {
   text-transform: lowercase;
 }
 
+/* PAGE SECTION STYLES */
 .wrapper-section {
   background-color: rgb(30, 30, 30);
   color: #eeeeee;
@@ -222,24 +220,17 @@ button:focus {
 }
 .wrapper-section .wrapper-padding section h2 {
   text-shadow: 1px 1px 1px rgb(0, 0, 0);
-  color: #e10037;
   color: white;
   text-transform: lowercase;
   font-size: 40px;
   font-weight: 500;
   letter-spacing: 1px;
 }
-
 .wrapper-section .wrapper-padding section .subheader {
   text-transform: uppercase;
   color: gray;
 }
 
-.wrapper-section footer#signature-footer {
-  color: #eeeeee;
-  padding-bottom: 35px;
-  text-shadow: 0 -2px rgba(0, 0, 0, 0.7);
-}
 
 /*!
  **********************************************************
@@ -253,9 +244,7 @@ button:focus {
  **********************************************************
  */
 
-section#about-me {
-  /*background-color: rgb(50, 50, 55);*/
-}
+/* ABOUT ME SECTION STYLES */
 section#about-me .media {
   margin-bottom: 20px;
 }
@@ -282,7 +271,6 @@ section#about-me .media .media-body {
 section#about-me .fa-file-text-o {
   margin-bottom: 3px;
 }
-
 section#about-me h4.connectHeader {
   margin: 5px 0 10px 0;
   color: rgb(100, 100, 100);
@@ -301,8 +289,7 @@ section#about-me a.connectLink {
   font-size: 16px;
 }
 section#about-me a.connectLink:hover {
-  color: gray;
-  
+  color: gray; 
 }
 
 /* E-mail/GitHub/LinkedIn icons */
@@ -310,10 +297,12 @@ section#about-me span.connectIcon {
   color: #e10037;
   background-color: inherit;
 }
-
 section#about-me span.connectIcon hover {
   color: black;
 }
+
+
+/* SKILLS BAR STYLES */
 
 section#skills .progress {
   background-color: rgb(45, 45, 45);
@@ -360,6 +349,10 @@ section#skills .progress.level .progress-bar:last-child {
     font-size: 9px;
   }
 }
+
+
+/* WORK EXPERIENCE & EDUCATION STYLES */
+
 section#experience.panel-group.resume,
 section#education.panel-group.resume {
   position: relative;
@@ -557,21 +550,13 @@ section#login input:focus {
   border-color: white;
   outline: none;
 }
-
 section#contact .contactInfo {
   font-size: 18px;
 }
-
 section#contact .contactInfo .fa {
   color: #e10037;
   margin: 25px 0 5px 0;
 }
-
-section#contact .contactHeader {
-  color: gray;
-  font-size: 15px;
-}
-
 section#contact .errorMessage,
 section#login .errorMessage {
   font-weight: bold;
@@ -579,7 +564,6 @@ section#login .errorMessage {
 section#login .formDiv {
   padding: 0;
 }
-
 section#login label {
   max-width: 300px;
 }
@@ -587,22 +571,7 @@ section#login input {
   max-width: 300px;
 }
 
-section#milestones .thumbnail {
-  background-color: inherit;
-  border: 0;
-  text-align: center;
-}
-section#milestones .thumbnail > i.fa {
-  border-radius: 90px;
-  border: 1px solid #00a69a;
-  color: #00a69a;
-  font-size: 60px;
-  height: 180px;
-  line-height: 180px;
-  margin: auto;
-  width: 180px;
-}
-
+/* PORTFOLIO STYLES */
 section#portfolio .portfolioDiv {
   width: 100%;
   height: 18em;
@@ -611,11 +580,9 @@ section#portfolio .portfolioDiv {
   margin: 18px auto 2px auto;
   box-shadow: none;
 }
-
 section#portfolio .portfolioDiv:hover {
   border-color: rgb(150,150,150);
 }
-
 /* set backgrounds for portfolio thumbnails */
 section#portfolio div#kfbDiv {
   background-image: url("../img/kfb/kfb-contribute.png");
@@ -629,6 +596,10 @@ section#portfolio div#artDiv {
   background-image: url("../img/art/art2.png");
   background-size: cover;
 }
+section#portfolio div#projectsDiv {
+  background-image: url("../img/projects/analog.png");
+  background-size: cover;
+}
 
 section#portfolio figcaption {
   margin-top: 5px;
@@ -638,15 +609,28 @@ section#portfolio figcaption {
 section#portfolio a.extLink {
   color: gray;
 }
-section#portfolio a.extLink:hover,
-section#contactData a.logout:hover {
+
+/* CONTACT DATA STYLES */
+section#portfolio a.extLink:hover {
   color: #eeeeee;
   text-decoration: none;
 }
-
+section#contactData {
+  background-color: #eeeeee;
+  color: black;
+  padding: 20px;
+}
+section#contactData h2 {
+  color: rgb(30,30,30);
+  text-shadow: 1px 1px 1px rgb(150,150,150);
+}
 section#contactData a.logout {
   font-size: 15px;
+  color: #e10037;
+}
+section#contactData a.logout:hover {
   color: gray;
+  text-decoration: none;
 }
 
 /*!

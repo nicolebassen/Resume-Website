@@ -1,4 +1,11 @@
 <?php
+/*
+ * Nicole Bassen
+ * nbassen.greenrivertech.net
+ * This page displays thumbnails that link to
+ * jQuery Colorbox carousels of images as portfolio pieces
+ */
+
 // include side section, stylesheet, hyperlinks and scripts
 include('includes/aside.php');
 ?>
@@ -79,69 +86,27 @@ include('includes/aside.php');
                     <!-- / seahawks -->
                     
                     
-                    <div class="portfolioDiv">
-                      
+                    <!-- Small Projects Thumbnail -->
+                    <a href="img/projects/analog.png" class="projectsColorbox" title="A web page using HTML and CSS">
+                      <div class="portfolioDiv" id="projectsDiv">
+                      </div>
+                    </a>
+                    <figcaption>Small Projects and Assignments</figcaption>
+                    
+                    <div class="cbox">
+                      <a href="img/projects/ajax.png" class="projectsColorbox" title="Ajax Dictionary" />
+                      <a href="img/projects/bootstrap.png" class="projectsColorbox"
+                         title="A responsive web page using Bootstrap (Lynda.com)" />
+                      </a>
                     </div>
+                    <!-- / projects -->
 
                   </div>
 
 
                 </div>
-                
-                <!-- contact information 
-
-                <div class="row">
-
-                  <div class="col-md-4 col-lg-4">
-
-                    <article class="media">
-
-                      <div class="pull-left">
-                        <span class="fa fa-phone bg-primary text-primary animated rotateIn"></span>
-                      </div>
-                      <div class="media-body animated fadeInRight">(253) 326-2562</div>
-
-                    </article>
-
-                  </div>
-
-                  <div class="col-md-5 col-lg-5">
-
-                    <article class="media">
-
-                      <div class="pull-left">
-                        <span class="fa fa-envelope bg-primary text-primary animated rotateIn"></span>
-                      </div>
-                      <div class="media-body animated fadeInRight">nicolerbassen@gmail.com</div>
-
-                    </article>
-
-                  </div>
-
-                  <div class="col-md-3 col-lg-3">
-
-                    <article class="media">
-
-                      <div class="pull-left">
-                        <span class="fa fa-map-marker bg-primary text-primary animated rotateIn"></span>
-                      </div>
-                      <div class="media-body animated fadeInRight">Pacific, WA</div>
-
-                    </article>
-
-                  </div>
-
-                </div>
-
-              </section><!--/ about me -->
            
             </div><!--/ padding -->
-
-            <!--
-            <footer class="visible-xs">
-              <p class="text-center"><small>Tim Foreman&copy;2015 <span class="text-secondary">Web Developer</span></small></p>
-            </footer>
-            -->
           
           </div><!--/ col-9 -->
 
@@ -155,9 +120,6 @@ include('includes/aside.php');
 
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  
-  <!-- Nicole's jQuery -->
-
 
   <!-- Bootstrap JS -->
   <script src="js/bootstrap.min.js"></script>
@@ -195,7 +157,12 @@ include('includes/aside.php');
         'maxWidth':'80%' ,
         'maxHeight':'80%' ,
         'scalePhotos' : true });
-      
+      jQuery('a.projectsColorbox').colorbox({
+        opacity:0.5 ,
+        rel:'group4',   
+        'maxWidth':'80%' ,
+        'maxHeight':'80%' ,
+        'scalePhotos' : true });
       
     });
   </script>

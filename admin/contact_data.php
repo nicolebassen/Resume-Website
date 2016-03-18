@@ -15,7 +15,9 @@ include('../../dbc.php');
  */
 
 ?>
+		<!-- Bootstrap css -->
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		
         <!-- data tables css -->
         <link href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css"
           rel="stylesheet">
@@ -34,16 +36,27 @@ include('../../dbc.php');
                 </h2>
                 
 				<!-- table for displaying all messages sent through the contact form -->
-                <table width="100%" class="display table table-bordered table-striped" id="formMessages" cellspacing="0">
-				<thead>
-				<tr>
-                    <th class="">Name</th><th class="">E-Mail</th><th colspan="2" class="">Message</th>
-                </tr>
-				</thead>
-				<tbody>
-                
 				
-                <?php
+				<table id="formMessages" class="display" cellspacing="0" width="100%">
+				<thead>
+				  <tr>
+					<th>Name</th>
+					<th>E-Mail</th>
+					<th>Message</th>
+				  </tr>
+				</thead>
+ 
+				<tfoot>
+				  <tr>
+					<th>Name</th>
+					<th>E-Mail</th>
+					<th>Message</th>
+				 </tr>
+				</tfoot>
+				
+				<tbody>
+				  
+				<?php
                 $sql = "SELECT * FROM nbassen_contact.form_messages";
                 $result = @mysqli_query($cnxn, $sql);
                 
@@ -55,46 +68,39 @@ include('../../dbc.php');
 					$message = htmlentities($row['message']);
                     
 					// print rows
-					echo  "<tr><td>$name</td>";
-					echo "<td>$email</td>";
-					echo '<td colspan="2">' . $message . '</td>';
+					echo "<tr>";
+					echo "<td>" . $name . "</td>";
+					echo "<td>" . $email . "</td>";
+					echo "<td>" . $message . "</td>";
 					echo '</tr>';
 					
 				}
                 ?>
-				
-                </tbody></table>
-                
-                
-              </section>
 
-            </div>
-          </div>
-        </section>
-        </div>
-        </div>
-        </div>
-        
-      </body>
-        
-      <!-- jQuery -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+				</tbody>
+				</table>
+				
+			  </section>
+			</div>
+		  </div>
+		</section>
       
-      <!-- Bootstrap JS -->
-      <script src="../js/bootstrap.min.js"></script>
+    </div>
+	</div>
+	
+  
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+	<!-- Plugins JS -->
+    <script src="../js/debouncer.js"></script>
           
-      <!-- Plugins JS -->
-      <script src="../js/debouncer.js"></script>
-          
-      <!-- Core Theme JS -->
-      <script src="../js/enterprise.js"></script>
-        
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-	  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	  <script src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
-        
-	  <!-- jQuery Data Table for displaying messages -->
-      <script>
-          $('#formMessages').DataTable();    
-      </script>
+    <!-- Core Theme JS -->
+    <script src="../js/enterprise.js"></script>
+    
+    <script>
+      $('#formMessages').DataTable();
+    </script>
+    
+  </body>
 </html>
