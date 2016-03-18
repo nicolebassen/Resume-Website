@@ -1,0 +1,34 @@
+.transition-all()
+{
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+}
+.text-shadow-white(@fade)
+{		
+	text-shadow: 0 2px rgba(255, 255, 255, @fade)
+}
+.text-shadow-black(@fade)
+{		
+	text-shadow: 0 -2px rgba(0, 0, 0, @fade)
+}
+
+.aside-height-full()
+{
+	height: 100%;
+	margin-left: 0;
+	margin-right: 0;	
+}
+
+.reset-margin-row()
+{
+	margin-left: -15px;
+	margin-right: -15px;	
+}
+
+.style-skin(@color)
+{
+	background-color: inherit;
+	border-color: @color;
+	color: @color;
+}

@@ -1,0 +1,698 @@
+/*!
+ *  Theme		: Enterprise 
+ *  Description : CV Resume Template by themesforever.com
+ *  Version     : 1.0
+ */
+
+/*!
+ *	Resume styles:
+ *	
+ *	1.	GLOBAL STYLES
+ *
+ *	2.	LAYOUT DESIGN
+ *		2.1	WRAPPER ASIDE / Left		
+ *		2.2	WRAPPER SECTION / Right
+ *
+ *	3.	SECTIONS	
+ *		3.1	SECTION // ABOUT ME
+ *		3.2	SECTION // SKILLS
+ *		3.3	SECTION // EXPERIENCE AND EDUCATION
+ *		3.4	SECTION // MILESTONES
+ *	
+ *	4.	LAYOUT HEIGHT 100%	
+ *
+ */
+
+@import "variables.less";
+@import "mixins.less";
+ 
+/*!
+ **********************************************************
+ *
+ *	1.	GLOBAL STYLES
+ *		Defaults HTML and overrides styles Bootstrap
+ *
+ **********************************************************
+ */
+
+body
+{
+	background-color: @bg-body;
+	color: @color-default;
+	font-family: @serif-font;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 24px
+}
+
+p 
+{
+	text-align: @text-align
+}
+
+a
+{
+	text-decoration: none;
+	.transition-all;
+
+	&:hover,
+	&:focus
+	{
+		color: @color-primary
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	font-weight: 300;
+	margin: 0;
+	margin-left: -1px;
+	padding: 0;
+	text-transform: uppercase
+}
+
+.text-primary
+{
+	color: @color-primary;
+}
+.text-secondary
+{
+	color: @color-secondary;
+}
+
+.btn 
+{
+	border-radius: 0;
+	
+	&.btn-default
+	{
+		.style-skin(@color-gray);
+
+		&:hover,
+		&:active,
+		&:hover
+		{
+			.style-skin(@color-secondary)
+		}
+
+
+	}
+}
+
+/*!
+ **********************************************************
+ *
+ *	2.	LAYOUT DESIGN
+ *		2.1	WRAPPER ASIDE / Left
+ *			//	header
+ *				//	img ->	Photo	
+ *				//	h1	->	Nombre
+ *				//	h2 	->	Description
+ * 
+ *			//	nav
+ *				//	li a -> Social links
+ *
+ *			//	footer
+ *				//	TimForeman©2015	
+ *
+ *		2.2	WRAPPER SECTION / Right
+ *			//	WRAPPER PADDING
+ *			//	MARGIN BOTTOM
+ *			//	FOOTER SIGNATURE ONLY MOVIL
+ *
+ **********************************************************
+ */
+
+.wrapper-aside 
+{
+
+	background-color: @bg-wrapper-aside;
+	color: @color-default;
+
+	header
+	{
+		margin: 35px 0;
+		text-align: center;	
+
+		> article
+		{
+			margin: auto;
+			max-width: 180px;
+
+			> img
+			{
+				border: 3px solid rgba(255, 255, 255, 0.4);
+			}
+		}
+
+		h1
+		{
+			font-size: @text-size-name;
+			font-weight: 800;
+			margin-top: 25px;
+			.text-shadow-white(.8);
+		}
+		
+		h2
+		{
+			font-size: @text-size-description;
+			font-weight: 400;
+			margin-top: 7px;
+			.text-shadow-white(.8)
+		}
+
+	}
+	
+	nav
+	{
+		padding-bottom: 30px;
+
+		.pager
+		{
+			padding:0;
+			margin: 0;
+			margin-bottom: 6px;
+		
+			a,
+			a:focus
+			{
+				background-color: @color-secondary;
+				border-radius: @button-social-size / 2;
+				box-shadow: 0 0 1px rgba(255, 255, 255, 0.9);
+				color: @button-social-color;
+				font-size: @button-social-size / 3 + 3px;
+				height: @button-social-size;
+				line-height: @button-social-size;
+				padding: 0;
+				width: @button-social-size;
+				.transition-all;
+
+				&:hover
+				{
+					background-color: @color-primary;
+					text-shadow: none
+				}
+			}
+
+		}
+
+	}
+
+	footer
+	{
+		bottom: 8px;
+		font-size: 13px;
+		font-weight: 400;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		.reset-margin-row();
+		.text-shadow-white(.8)
+	}
+
+}
+
+.wrapper-section
+{
+	background-color: @bg-wrapper-section;
+	color: @color-gray;
+
+	.wrapper-padding
+	{
+		padding-top: @wrapper-padding-section * 1.3;
+		padding-left: @wrapper-padding-section; 
+		padding-right: @wrapper-padding-section; 
+
+		@media (max-width: 768px)
+		{
+			padding-left: @wrapper-padding-section * .4;
+			padding-right: @wrapper-padding-section * .4;
+		}
+
+
+		section
+		{		
+			.margin-bottom
+			{
+				margin-bottom: @margin-bottom-section / 2
+			}
+			&.margin-bottom
+			{
+				margin-bottom: @margin-bottom-section
+			}
+
+			h2
+			{
+				font-size: @text-size-subtitle;
+				font-weight: @text-weight-subtitle;
+			}
+		}
+
+	}
+	footer#signature-footer
+	{
+		color: @color-gray;
+		padding-bottom: @wrapper-padding-section;
+		.text-shadow-black(.7)
+	}
+	
+}
+
+/*!
+ **********************************************************
+ *
+ *	3.	SECTIONS	
+ *		3.1	SECTION // ABOUT ME
+ *		3.2	SECTION // SKILLS
+ *		3.3	SECTION // EXPERIENCE AND EDUCATION
+ *		3.4	SECTION // MILESTONES
+ *
+ **********************************************************
+ */
+
+section#about-me
+{
+	.media
+	{
+		margin-bottom: @margin-bottom-section / 3;
+
+		span
+		{
+			background-color: inherit;
+			border-radius: 14px;	
+			border: 1px solid @color-secondary;
+			color: @color-secondary;
+			display: block;
+			font-size: 12px;
+			height: 28px;
+			line-height: 26px;
+			text-align: center;
+			width: 28px;
+		
+			@media (max-width: 1200px)
+			{
+				&
+				{
+					margin: auto;
+				}
+			}	
+
+		}
+
+		.media-body
+		{
+			line-height: 28px
+		}
+	}
+}
+
+section#skills
+{
+	.progress
+	{
+		background-color: @color-primary;
+		border-radius: 0;
+		border: 1px solid @color-gray;
+		box-shadow: none;
+		height: 35px;
+		line-height: 35px;
+		padding: 0;
+		margin-bottom: 12px;
+
+		.progress-bar
+		{
+			background-color: darken(@color-primary,5%);
+			border-right: 1px solid @color-secondary;
+			box-shadow: none;
+			color: @color-gray;
+			font-size: 12px;
+			font-weight: 300;
+			line-height: 33px;
+			text-transform: uppercase;
+		}
+
+		&.level
+		{
+			@border-level: 1px dotted @color-gray;
+			background-color: inherit;
+			border: 0;
+			border-bottom: @border-level;
+			border-left: @border-level;
+			border-right: @border-level;
+
+			.progress-bar
+			{
+				background-color: inherit;
+				box-shadow: none;
+				border-right: @border-level;
+				color: @color-secondary;
+				font-size: 11px;
+
+				&:last-child
+				{
+					border-right: none
+				}
+
+				@media (max-width: 568px)
+				{
+					&
+					{
+						font-size: 9px;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+section#experience,
+section#education
+{
+	&.panel-group.resume
+	{
+		position: relative;
+
+		.resume-item
+		{
+			position: relative;
+			margin-bottom: 20px;
+
+			@media (max-width: 567px)
+			{
+				&
+				{
+					margin-bottom: 40px;
+				}
+			}
+
+			@media (min-width: 768px)
+			{
+				&:before
+				{
+					position: absolute;
+					content: '';
+					width: 1px;
+					height: ~"calc(100% + 20px)";
+					top: 0;
+					left: 160px;
+					border-left: 1px dotted @color-secondary;
+				}
+			}
+
+			&:last-child
+			{
+				margin-bottom: 0px;
+
+				&:before
+				{
+					display: none;
+				}
+			}
+
+			.resume-year
+			{
+				background-color: @color-primary;
+				display: block;
+				color: @color-gray;
+				position: relative;
+				width: 110px;
+				height: 40px;
+				margin-bottom: 20px;
+				line-height: 37px;
+				text-align: center;
+				font-weight: 300;
+				text-transform: uppercase;
+				border: 1px solid @color-gray;
+
+				@media (min-width: 568px)
+				{
+					&
+					{
+						position: absolute;
+						top: 0px;
+						left: 0px;
+						margin: 0;
+					}
+				}
+			}
+			//-> end resume-year
+
+			@panel-height: 40px;
+
+			.resume-btn
+			{
+				position: absolute;
+				z-index: 5;
+				top: 0;
+				left: 140px;
+				width: @panel-height;
+				height: @panel-height;
+				background-color: @color-primary;
+				border-radius: 0;
+				border: 1px solid @color-secondary;
+
+				@media (max-width: 767px)
+				{
+					&
+					{
+						display: none;
+					}
+				}
+
+				> a
+				{
+					display: block;
+					position: absolute;
+					z-index: 10;
+					top: 0;
+					left: 0;
+					width: @panel-height;
+					height: @panel-height;
+
+					&:before
+					{
+						display: block;
+						position: absolute;
+						z-index: 15;
+						content: '-';
+						top: 0;
+						left: 0;
+						width: @panel-height;
+						height: @panel-height;
+						line-height: 38px;
+						color: @color-gray;
+						font-size: 30px;
+						font-weight: 700;
+						text-align: center;
+					}
+					&.collapsed:before
+					{
+					  content: '+';
+					}
+				}
+			}
+			//-> end resume-btn
+
+			.panel
+			{
+				padding: 0;
+				padding-bottom: 15px;
+				width: 100%;
+				background: transparent;
+				border-radius: 0px;
+
+				@media (min-width: 568px)
+				{
+					&
+					{
+						width: ~"calc(100% - 140px)";
+						margin-left: 140px;
+					}
+				}
+
+				@media (min-width: 768px)
+				{
+					&
+					{
+						width: ~"calc(100% - 205px)";
+						margin-left: 205px;
+					}
+				}
+
+				.panel-heading
+				{
+					padding: 0; 
+					padding-bottom: 5px;
+					position: relative;
+
+					.panel-title
+					{
+						height: @panel-height;
+						line-height: @panel-height;
+						padding: 0;
+
+						h4
+						{
+							float: left;
+							line-height: @panel-height;
+							margin-right: 10px
+						}
+
+						@media (max-width: 969px)
+						{
+							&
+							{
+								height: auto;
+								line-height: auto;
+							}
+							h4
+							{
+								float: none;
+							}
+						}					
+					}
+				}
+
+				.panel-collapse
+				{
+					.panel-body
+					{
+						padding: 0;
+						border-top: none;
+
+						p
+						{
+						  margin-bottom: 20px;
+						}
+					}
+				}
+
+			}
+			// /-> end .panel
+
+
+		}
+		// /-> end .resume-item 
+	}
+}
+
+section#milestones
+{
+	.thumbnail
+	{
+		background-color: inherit;
+		border: 0;
+		text-align: center;
+		@milestones-fa: 180px;
+		> i.fa
+		{
+			border-radius: @milestones-fa / 2;
+			border: 1px solid @color-secondary;;
+			color: @color-secondary;
+			font-size: @milestones-fa / 3;
+			height: @milestones-fa;
+			line-height: @milestones-fa;
+			margin: auto;
+			width: @milestones-fa;
+		}
+
+	}
+
+}
+
+
+/*!
+ **********************************************************
+ *
+ *	4.	LAYOUT HEIGHT 100%
+ *
+ **********************************************************
+ */
+
+html,
+body
+{
+	height: 100%;
+}
+
+.wrapper
+{
+
+	.aside-height-full();
+	&:before,
+	&:after
+	{
+		content: "";
+		display: table
+	}
+	&:after
+	{
+		clear: both
+	}
+
+	> .box
+	{
+	  	bottom: 0; /* increase for footer use */
+	    left: 0;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    background-size: cover;
+	    background-attachment: fixed;
+
+		> .row
+		{
+			.aside-height-full();
+
+			> .column
+			{
+			    height: 100%;
+			    overflow: auto;
+			    *zoom: 1;
+
+			    &:before,
+				&:after
+				{
+					content: "";
+					display: table;
+				}
+				&:after
+				{
+					clear: both
+				}
+
+				&.wrapper-section
+				{
+					.col-sm-9.full
+					{
+					    width: ~"calc(100% + 30px)";
+					    .reset-margin-row();
+
+					    .padding
+					    {
+					    	.reset-margin-row();
+					    }
+					}
+
+				}
+
+				@media (max-width: 767px)
+				{
+					&
+					{
+						height: auto
+					}
+				}
+			}
+
+		}
+	}
+	
+}
+// end Layout height 100
