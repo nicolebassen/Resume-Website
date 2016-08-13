@@ -87,20 +87,25 @@ include('includes/aside.php');
                     <!-- / seahawks -->
                     
                     
-                    <!-- Small Projects Thumbnail -->
-                    <a href="img/projects/analog.png" class="projectsColorbox" title="A web page using HTML and CSS">
-                      <div class="portfolioDiv" id="projectsDiv">
+                    <!-- Kent Serves Thumbnail -->
+                    <a href="img/kent-serves-index.png" class="kentServesColorbox" title="Kent Serves Website">
+                      <div class="portfolioDiv" id="kentServesDiv">
                       </div>
                     </a>
-                    <figcaption>Small Projects and Assignments</figcaption>
+                    <figcaption>Kent Serves Website<br>
+                      <a href="http://kent-serves.greenrivertech.net" target="new" title="Kent Serves"
+                        class="extLink">
+                          Visit Website&nbsp;<span class="fa fa-external-link"></span>
+                        </a>
+                    </figcaption>
                     
                     <div class="cbox">
-                      <a href="img/projects/ajax.png" class="projectsColorbox" title="Ajax Dictionary" />
-                      <a href="img/projects/bootstrap.png" class="projectsColorbox"
-                         title="A responsive web page using Bootstrap (Lynda.com)" />
+                      <a href="img/kent-serves-registration.png" class="kentServesColorbox" title="Registration Form" />
+                      <a href="img/kent-serves-partners.png" class="kentServesColorbox"
+                         title="Kent Serves Partners" />
                       </a>
                     </div>
-                    <!-- / projects -->
+                    <!-- / Kent Serves -->
 
                   </div>
 
