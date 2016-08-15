@@ -101,9 +101,7 @@ include('includes/aside.php');
                     
                     <div class="cbox">
                       <a href="img/kent-serves-registration.png" class="kentServesColorbox" title="Registration Form" />
-                      <a href="img/kent-serves-partners.png" class="kentServesColorbox"
-                         title="Kent Serves Partners" />
-                      </a>
+                      <a href="img/kent-serves-partners.png" class="kentServesColorbox" title="Kent Serves Partners" /></a>
                     </div>
                     <!-- / Kent Serves -->
 
@@ -159,7 +157,7 @@ include('includes/aside.php');
         'maxWidth':'80%' ,
         'maxHeight':'80%' ,
         'scalePhotos' : true });
-      jQuery('a.projectsColorbox').colorbox({
+      jQuery('a.kentServesColorbox').colorbox({
         opacity:0.5 ,
         rel:'group4',   
         'maxWidth':'80%' ,
